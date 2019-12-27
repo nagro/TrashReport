@@ -1,0 +1,34 @@
+{
+  "name": "Bac",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id":true,
+      "required": true
+    },
+    "coordonnees": {
+      "type": "object"
+    },
+    "capacite": {
+      "type": "number"
+    },
+    "frequence_de_remplissage": {
+      "type": "number"
+    },
+    "etat_de_remplissage": {
+      "type": "number"
+    },
+    "url_last_img": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Registre",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "id_utilisateur": {
+      "type": "number",
+      "required": true
+    },
+    "id_bac": {
+      "type": "number"
+    },
+    "heure": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Utilisateur",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id":true,
+      "required": true
+    },
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "poste": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
