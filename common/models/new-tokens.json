@@ -1,0 +1,23 @@
+{
+  "name": "NewTokens",
+  "base": "AccessToken",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "user": {
+    "type": "belongsTo",
+      "idName": "id",
+      "polymorphic": {
+        "idType": "number",
+        "foreignKey": "id",
+        "discriminator": "principalType"
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

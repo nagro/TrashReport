@@ -8,7 +8,7 @@
   "properties": {
     "id": {
       "type": "number",
-      "id":true,
+      "id": true,
       "required": true
     },
     "nom": {
@@ -20,7 +20,27 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "NewTokens",
+      "polymorphic": {
+        "foreignKey": "id",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [
+    {
+  "accessType": "READ",
+  "principalType": "ROLE",
+  "principalId": "admin",
+  "permission": "ALLOW",
+  "property": "find"
+}
+  ],
   "methods": {}
 }

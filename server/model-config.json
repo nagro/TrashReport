@@ -50,5 +50,9 @@
   "Registre": {
     "dataSource": "bd1",
     "public": true
+  },
+  "NewTokens": {
+    "dataSource": "bd1",
+    "public": true
   }
 }
