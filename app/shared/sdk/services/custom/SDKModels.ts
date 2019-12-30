@@ -5,6 +5,7 @@ import { Utilisateur } from '../../models/Utilisateur';
 import { Agent } from '../../models/Agent';
 import { Bac } from '../../models/Bac';
 import { Registre } from '../../models/Registre';
+import { NewTokens } from '../../models/NewTokens';
 
 export interface Models { [name: string]: any }
 
@@ -17,6 +18,7 @@ export class SDKModels {
     Agent: Agent,
     Bac: Bac,
     Registre: Registre,
+    NewTokens: NewTokens,
     
   };
 

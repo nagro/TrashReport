@@ -5,7 +5,8 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+  },
   "validations": [],
   "relations": {
     "user": {
@@ -13,7 +14,7 @@
       "idName": "id",
       "polymorphic": {
         "idType": "number",
-        "foreignKey": "id",
+        "foreignKey": "userId",
         "discriminator": "principalType"
       }
     }

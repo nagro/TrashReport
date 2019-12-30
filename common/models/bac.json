@@ -6,11 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true
-    },
     "coordonnees": {
       "type": "object"
     },
@@ -21,7 +16,7 @@
       "type": "number"
     },
     "etat_de_remplissage": {
-      "type": "number"
+      "type": "string"
     },
     "url_last_img": {
       "type": "string"

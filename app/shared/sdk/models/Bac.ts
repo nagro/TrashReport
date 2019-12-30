@@ -2,21 +2,21 @@
 
 declare var Object: any;
 export interface BacInterface {
-  "id": number;
   "coordonnees"?: any;
   "capacite"?: number;
   "frequence_de_remplissage"?: number;
-  "etat_de_remplissage"?: number;
+  "etat_de_remplissage"?: string;
   "url_last_img"?: string;
+  "id"?: number;
 }
 
 export class Bac implements BacInterface {
-  "id": number;
   "coordonnees": any;
   "capacite": number;
   "frequence_de_remplissage": number;
-  "etat_de_remplissage": number;
+  "etat_de_remplissage": string;
   "url_last_img": string;
+  "id": number;
   constructor(data?: BacInterface) {
     Object.assign(this, data);
   }
@@ -50,10 +50,6 @@ export class Bac implements BacInterface {
       path: 'Bacs',
       idName: 'id',
       properties: {
-        "id": {
-          name: 'id',
-          type: 'number'
-        },
         "coordonnees": {
           name: 'coordonnees',
           type: 'any'
@@ -68,11 +64,15 @@ export class Bac implements BacInterface {
         },
         "etat_de_remplissage": {
           name: 'etat_de_remplissage',
-          type: 'number'
+          type: 'string'
         },
         "url_last_img": {
           name: 'url_last_img',
           type: 'string'
+        },
+        "id": {
+          name: 'id',
+          type: 'number'
         },
       },
       relations: {

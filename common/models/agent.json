@@ -5,12 +5,10 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "ClearBaseAcls": true
+  },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true
-    },
     "nom": {
       "type": "string",
       "required": true
@@ -25,7 +23,7 @@
       "type": "hasMany",
       "model": "NewTokens",
       "polymorphic": {
-        "foreignKey": "id",
+        "foreignKey": "userId",
         "discriminator": "principalType"
       },
       "options": {

@@ -53,6 +53,7 @@ import { UtilisateurApi } from './services/custom/Utilisateur';
 import { AgentApi } from './services/custom/Agent';
 import { BacApi } from './services/custom/Bac';
 import { RegistreApi } from './services/custom/Registre';
+import { NewTokensApi } from './services/custom/NewTokens';
 /**
 * @module SDKBrowserModule
 * @description
@@ -88,6 +89,7 @@ export class SDKBrowserModule {
         AgentApi,
         BacApi,
         RegistreApi,
+        NewTokensApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }

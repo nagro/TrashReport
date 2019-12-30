@@ -1,28 +1,31 @@
 /* tslint:disable */
+import {
+  NewTokens
+} from '../index';
 
 declare var Object: any;
 export interface UtilisateurInterface {
-  "id": number;
   "nom": string;
   "poste"?: string;
   "realm"?: string;
   "username"?: string;
   "email": string;
   "emailVerified"?: boolean;
+  "id"?: number;
   "password"?: string;
-  accessTokens?: any[];
+  accessTokens?: NewTokens[];
 }
 
 export class Utilisateur implements UtilisateurInterface {
-  "id": number;
   "nom": string;
   "poste": string;
   "realm": string;
   "username": string;
   "email": string;
   "emailVerified": boolean;
+  "id": number;
   "password": string;
-  accessTokens: any[];
+  accessTokens: NewTokens[];
   constructor(data?: UtilisateurInterface) {
     Object.assign(this, data);
   }
@@ -56,10 +59,6 @@ export class Utilisateur implements UtilisateurInterface {
       path: 'Utilisateurs',
       idName: 'id',
       properties: {
-        "id": {
-          name: 'id',
-          type: 'number'
-        },
         "nom": {
           name: 'nom',
           type: 'string'
@@ -84,6 +83,10 @@ export class Utilisateur implements UtilisateurInterface {
           name: 'emailVerified',
           type: 'boolean'
         },
+        "id": {
+          name: 'id',
+          type: 'number'
+        },
         "password": {
           name: 'password',
           type: 'string'
@@ -92,8 +95,8 @@ export class Utilisateur implements UtilisateurInterface {
       relations: {
         accessTokens: {
           name: 'accessTokens',
-          type: 'any[]',
-          model: '',
+          type: 'NewTokens[]',
+          model: 'NewTokens',
           relationType: 'hasMany',
                   keyFrom: 'id',
           keyTo: 'userId'

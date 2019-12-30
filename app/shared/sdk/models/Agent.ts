@@ -1,28 +1,31 @@
 /* tslint:disable */
+import {
+  NewTokens
+} from '../index';
 
 declare var Object: any;
 export interface AgentInterface {
-  "id": number;
   "nom": string;
   "poste"?: string;
   "realm"?: string;
   "username"?: string;
   "email": string;
   "emailVerified"?: boolean;
+  "id"?: number;
   "password"?: string;
-  accessTokens?: any[];
+  accessTokens?: NewTokens[];
 }
 
 export class Agent implements AgentInterface {
-  "id": number;
   "nom": string;
   "poste": string;
   "realm": string;
   "username": string;
   "email": string;
   "emailVerified": boolean;
+  "id": number;
   "password": string;
-  accessTokens: any[];
+  accessTokens: NewTokens[];
   constructor(data?: AgentInterface) {
     Object.assign(this, data);
   }
@@ -56,10 +59,6 @@ export class Agent implements AgentInterface {
       path: 'Agents',
       idName: 'id',
       properties: {
-        "id": {
-          name: 'id',
-          type: 'number'
-        },
         "nom": {
           name: 'nom',
           type: 'string'
@@ -84,6 +83,10 @@ export class Agent implements AgentInterface {
           name: 'emailVerified',
           type: 'boolean'
         },
+        "id": {
+          name: 'id',
+          type: 'number'
+        },
         "password": {
           name: 'password',
           type: 'string'
@@ -92,8 +95,8 @@ export class Agent implements AgentInterface {
       relations: {
         accessTokens: {
           name: 'accessTokens',
-          type: 'any[]',
-          model: '',
+          type: 'NewTokens[]',
+          model: 'NewTokens',
           relationType: 'hasMany',
                   keyFrom: 'id',
           keyTo: 'userId'

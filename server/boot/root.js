@@ -7,15 +7,17 @@ module.exports = function(server) {
   server.use(router);
 
 
-server.models.User.create([
-    {username: 'admin1', email: 'guynkama@gmail.com', password: 'TruePass4'}
+    server.models.Agent.create([
+    {username: 'admin1', nom: 'admin', email: 'guynkama@gmail.com', password: 'TruePass4'}
 ], function(err, users) {
-    if (err) return debug('%j', err);
+    if (err) /*return debug('%j', err);*/
+    console.log(err);
+    //console.log(users);
     // Create the admin role
     server.models.Role.create({
       name: 'admin'
     }, function(err, role) {
-      if (err) return debug(err);
+      if (err) return /*debug(err);*/console.log(err);
       console.log(role);
 
       // Make admin1 an admin
