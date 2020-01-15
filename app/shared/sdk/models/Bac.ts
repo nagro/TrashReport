@@ -2,7 +2,8 @@
 
 declare var Object: any;
 export interface BacInterface {
-  "coordonnees"?: any;
+  "latitude"?: number;
+  "longitude"?: number;
   "capacite"?: number;
   "frequence_de_remplissage"?: number;
   "etat_de_remplissage"?: string;
@@ -11,7 +12,8 @@ export interface BacInterface {
 }
 
 export class Bac implements BacInterface {
-  "coordonnees": any;
+  "latitude": number;
+  "longitude": number;
   "capacite": number;
   "frequence_de_remplissage": number;
   "etat_de_remplissage": string;
@@ -50,9 +52,13 @@ export class Bac implements BacInterface {
       path: 'Bacs',
       idName: 'id',
       properties: {
-        "coordonnees": {
-          name: 'coordonnees',
-          type: 'any'
+        "latitude": {
+          name: 'latitude',
+          type: 'number'
+        },
+        "longitude": {
+          name: 'longitude',
+          type: 'number'
         },
         "capacite": {
           name: 'capacite',

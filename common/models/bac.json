@@ -6,8 +6,17 @@
     "validateUpsert": true
   },
   "properties": {
-    "coordonnees": {
-      "type": "object"
+    "latitude": {
+      "type": "number",
+      "mysql": {
+        "dataType": "DOUBLE"
+      }
+    },
+    "longitude":{
+      "type":"number",
+      "mysql": {
+        "dataType": "DOUBLE"
+      }
     },
     "capacite": {
       "type": "number"
